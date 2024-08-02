@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle est la capitale de la France ?",
+    "choices": ["Paris", "Londres", "Berlin", "Madrid"],
+    "correct": "Paris",
+    "difficulty": 1
+  },
+  {
+    "id": 2,
+    "question": "Quel est le plus grand océan du monde ?",
+    "choices": ["Océan Atlantique", "Océan Pacifique", "Océan Indien", "Océan Arctique"],
+    "correct": "Océan Pacifique",
+    "difficulty": 1
+  },
+  {
+    "id": 3,
+    "question": "Quelle est la formule chimique de l'eau ?",
+    "choices": ["H2O", "CO2", "O2", "H2SO4"],
+    "correct": "H2O",
+    "difficulty": 1
+  },
+  {
+    "id": 4,
+    "question": "Quel est le plus grand désert du monde ?",
+    "choices": ["Désert du Sahara", "Désert de Gobi", "Désert d'Arabie", "Antarctique"],
+    "correct": "Antarctique",
+    "difficulty": 2
+  },
+  {
+    "id": 5,
+    "question": "Qui a peint la Joconde ?",
+    "choices": ["Vincent Van Gogh", "Pablo Picasso", "Claude Monet", "Léonard de Vinci"],
+    "correct": "Léonard de Vinci",
+    "difficulty": 2
+  },
+  {
+    "id": 6,
+    "question": "En quelle année a eu lieu la Révolution française ?",
+    "choices": ["1789", "1776", "1804", "1492"],
+    "correct": "1789",
+    "difficulty": 2
+  },
+  {
+    "id": 7,
+    "question": "Quel est l'élément chimique avec le symbole 'Fe' ?",
+    "choices": ["Fer", "Fluor", "Francium", "Fermium"],
+    "correct": "Fer",
+    "difficulty": 3
+  },
+  {
+    "id": 8,
+    "question": "Quelle est la langue officielle du Brésil ?",
+    "choices": ["Espagnol", "Portugais", "Anglais", "Français"],
+    "correct": "Portugais",
+    "difficulty": 3
+  },
+  {
+    "id": 9,
+    "question": "Qui a développé la théorie de la relativité ?",
+    "choices": ["Isaac Newton", "Albert Einstein", "Galilée", "Niels Bohr"],
+    "correct": "Albert Einstein",
+    "difficulty": 3
+  },
+  {
+    "id": 10,
+    "question": "Quel est le plus long fleuve du monde ?",
+    "choices": ["Nil", "Amazon", "Yangtsé", "Mississippi"],
+    "correct": "Amazon",
+    "difficulty": 3
+  }
+]
