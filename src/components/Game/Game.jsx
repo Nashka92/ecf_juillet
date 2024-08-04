@@ -10,30 +10,28 @@ import PeutMieuxFaire from "../../asset/icons/PeutMieuxFaire";
 import Pasmal from "../../asset/icons/Pasmal";
 import Bien from "../../asset/icons/Bien";
 import Excellent from "../../asset/icons/Excellent";
+import useScore from '../hooks/useScore'; // Assurez-vous que le chemin est correct
 
 const Game = () => {
-  const { questions, error } = useQuestions(); // mon hook personnalisé pr récuperer la logique des question
+  const { questions, error } = useQuestions();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0); // le score est initialisé a 0 par défaut
+  const [score, setScore] = useScore(0); // Utilisez le hook personnalisé pour le score
   const [name] = useUserName();
   const [difficulty, setDifficulty] = useState(1);
 
-  // useEffect pour mettre à jour la difficulté lorsque l'index de la question actuelle change
   useEffect(() => {
     if (questions.length > 0 && currentQuestionIndex < questions.length) {
       setDifficulty(questions[currentQuestionIndex].difficulty);
     }
   }, [currentQuestionIndex, questions]);
 
-  // Fonction pour gérer la réponse des saisis de l'utilisateur
   const handleAnswer = (choice) => {
     if (choice === questions[currentQuestionIndex].correct) {
       setScore((prevScore) => prevScore + 1); 
     }
-    setCurrentQuestionIndex((prevIndex) => prevIndex + 1); // ici on incrémente et on passe a la question suivante
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   };
 
-  // Fonction pour obtenir le message final en fonction du score
   const getFinalMessage = (score) => {
     if (score === 0) {
       return (
@@ -82,7 +80,6 @@ const Game = () => {
     }
   };
 
-  // Affichage d'un message d'erreur en cas de problème de récupération des questions
   if (error) {
     return <div>Error: {error}</div>;
   }
@@ -105,7 +102,6 @@ const Game = () => {
     );
   }
 
-  // Récupération de la question actuelle
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
