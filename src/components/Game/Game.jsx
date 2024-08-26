@@ -10,12 +10,12 @@ import PeutMieuxFaire from "../../asset/icons/PeutMieuxFaire";
 import Pasmal from "../../asset/icons/Pasmal";
 import Bien from "../../asset/icons/Bien";
 import Excellent from "../../asset/icons/Excellent";
-import useScore from '../hooks/useScore'; // Assurez-vous que le chemin est correct
+import useScore from "../hooks/useScore";
 
 const Game = () => {
   const { questions, error } = useQuestions();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useScore(0); // Utilisez le hook personnalisé pour le score
+  const [score, setScore] = useScore(0);
   const [name] = useUserName();
   const [difficulty, setDifficulty] = useState(1);
 
@@ -27,7 +27,7 @@ const Game = () => {
 
   const handleAnswer = (choice) => {
     if (choice === questions[currentQuestionIndex].correct) {
-      setScore((prevScore) => prevScore + 1); 
+      setScore((prevScore) => prevScore + 1);
     }
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   };
@@ -68,15 +68,13 @@ const Game = () => {
           <span>Bien !</span>
         </div>
       );
-    } else if (score === 10) {
+    } else if (score >= 10) {
       return (
         <div className="flex flex-col items-center">
           <Excellent className="mb-2" />
           <span>Excellent !</span>
         </div>
       );
-    } else {
-      return "";
     }
   };
 
